@@ -27,8 +27,7 @@
   margin: 0 auto;
 }
 
-.brand,
-.auth-brand {
+.brand {
   min-width: 0;
   color: var(--color-text);
   font-size: 1rem;
@@ -151,7 +150,6 @@
 
 .button-primary,
 .submit-button,
-.auth-submit-button,
 .details-button {
   color: var(--color-surface);
   background: var(--color-primary);
@@ -229,7 +227,6 @@
 
 .button-primary:hover:not(:disabled),
 .submit-button:hover:not(:disabled),
-.auth-submit-button:hover:not(:disabled),
 .details-button:hover:not(:disabled) {
   color: var(--color-surface);
   background: var(--color-primary-hover);
@@ -268,7 +265,6 @@ textarea:disabled {
 
 .button-primary:disabled,
 .submit-button:disabled,
-.auth-submit-button:disabled,
 .details-button:disabled {
   color: #dbe5f2;
   background: #667b9c;
@@ -549,7 +545,6 @@ textarea:focus-visible {
 .search-card,
 .recent-searches,
 .help-card,
-.auth-card,
 .results-filter-panel,
 .listing-card,
 .state-panel,
@@ -1022,85 +1017,6 @@ input[type="range"]::-moz-range-thumb {
   padding: 32px var(--page-padding);
 }
 
-.auth-card {
-  width: min(100%, 480px);
-  padding: clamp(24px, 5vw, 36px);
-  text-align: left;
-  box-shadow: var(--shadow-medium);
-}
-
-.auth-brand {
-  padding-bottom: 22px;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.auth-heading {
-  margin-top: 24px;
-}
-
-.auth-heading h1 {
-  margin: 0;
-  color: var(--color-text);
-  font-size: 1.85rem;
-  line-height: 1.2;
-}
-
-.auth-heading p {
-  margin: 8px 0 0;
-  color: var(--color-text-muted);
-}
-
-.auth-form {
-  display: grid;
-  gap: 18px;
-  margin-top: 24px;
-}
-
-.auth-form label {
-  display: grid;
-  gap: 7px;
-  color: var(--color-text-secondary);
-  font-size: 0.9rem;
-  font-weight: 750;
-}
-
-.auth-form label span {
-  margin: 0;
-}
-
-.auth-form input {
-  min-height: 50px;
-}
-
-.auth-submit-button {
-  width: 100%;
-  min-height: 50px;
-  margin-top: 2px;
-}
-
-.auth-switch {
-  margin: 20px 0 0;
-  color: var(--color-text-muted);
-  text-align: center;
-}
-
-.auth-switch button {
-  min-height: 36px;
-  margin-left: 4px;
-  padding: 0 4px;
-  color: var(--color-primary);
-  background: transparent;
-  border: 0;
-  border-radius: 4px;
-  cursor: pointer;
-  font: inherit;
-  font-weight: 800;
-}
-
-.auth-loading {
-  color: var(--color-primary);
-}
-
 .browse-page,
 .detail-page,
 .compare-page,
@@ -1330,14 +1246,6 @@ input[type="range"]::-moz-range-thumb {
   .auth-page {
     align-items: start;
     padding-block: 18px;
-  }
-
-  .auth-card {
-    padding: 22px 18px;
-  }
-
-  .auth-brand .brand-copy strong {
-    white-space: normal;
   }
 }
 

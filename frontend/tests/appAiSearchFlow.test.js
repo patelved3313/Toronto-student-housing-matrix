@@ -257,7 +257,7 @@ test("the dashboard remains protected when no authenticated session exists", () 
     ),
   );
 
-  assert.ok(screen.getByRole("heading", { name: "Log In" }));
+  assert.ok(screen.getByRole("heading", { name: "Welcome back." }));
   assert.ok(screen.getByRole("textbox", { name: /^Email/ }));
   assert.equal(
     screen.queryByRole("textbox", { name: "Housing description" }),
