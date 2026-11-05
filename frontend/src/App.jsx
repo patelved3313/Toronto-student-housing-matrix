@@ -1096,13 +1096,14 @@ function App() {
     const password = authForm.password;
 
     if (authMode === "register" && !name) {
-      setAuthStatus({ type: "error", message: "Name is required." });
+      setAuthStatus({ type: "error", field: "name", message: "Name is required." });
       return;
     }
 
     if (!email || !password) {
       setAuthStatus({
         type: "error",
+        field: !email ? "email" : "password",
         message: "Email and password are required.",
       });
       return;
@@ -1111,6 +1112,7 @@ function App() {
     if (!isValidEmail(email)) {
       setAuthStatus({
         type: "error",
+        field: "email",
         message: "Please enter a valid email address.",
       });
       return;
@@ -1119,6 +1121,7 @@ function App() {
     if (password.length < 6) {
       setAuthStatus({
         type: "error",
+        field: "password",
         message: "Password must be at least 6 characters long.",
       });
       return;
